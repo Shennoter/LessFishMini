@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/sell/sell",
+    "pages/chat/chat",
+    "pages/user/user",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#C2185B",
+    "navigationBarTitleText": "少抓鱼",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true,
+    "backgroundColor":"#AD1457"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "icon/home.png",
+      "selectedIconPath": "icon/home-filling.png"
+    },
+    {
+      "pagePath": "pages/sell/sell",
+      "text": "卖书",
+      "iconPath": "icon/upload.png",
+      "selectedIconPath": "icon/rise-filling.png"
+    },
+    {
+      "pagePath": "pages/chat/chat",
+      "text": "聊天",
+      "iconPath": "icon/email.png",
+      "selectedIconPath": "icon/news-filling.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "icon/user.png",
+      "selectedIconPath": "icon/user-filling.png"
+    }
+   ],
+   "color":"#000000",
+   "selectedColor":"#E91E63"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
