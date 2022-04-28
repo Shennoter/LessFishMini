@@ -223,7 +223,7 @@ Page({
                         qqnum: that.data.qqnum,
                         email: that.data.email,
                         wxnum: that.data.wxnum,
-                        info: that.data.userInfo,
+                        // info: that.data.userInfo,
                         updatedat: new Date().getTime(),
                   },
                   success: function(res) {
@@ -235,8 +235,10 @@ Page({
                                     wx.hideLoading();
                                     wx.showToast({
                                           title: '修改成功',
-                                          icon: 'success'
+                                          icon: 'success',
+                                          duration: 1500
                                     })
+                                    wx.navigateBack({})
                               },
                         })
                   },
