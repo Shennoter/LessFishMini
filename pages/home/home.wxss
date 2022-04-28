@@ -1,9 +1,0 @@
-/* pages/home/home.wxss */
-.box{ 
-  width:230px; 
-  height:600px; 
-  border:0px solid #000; 
-  text-align:right;
-  display: table-cell;
-  line-height: 600px;
-} 
