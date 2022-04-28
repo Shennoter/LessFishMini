@@ -217,6 +217,7 @@ Page({
                                     wx.navigateBack({})
                               },
                         })
+                        wx.hideLoading();
                   },
                   fail() {
                         wx.hideLoading();

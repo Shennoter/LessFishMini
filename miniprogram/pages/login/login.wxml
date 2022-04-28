@@ -33,7 +33,7 @@
 
 
       <button class="confirm" bindtap="getUserProfile">注册并登录</button>
-      <button class="confirm" open-type='getUserInfo' bindgetuserinfo="getUserInfo">注册并登录</button>
+      <!-- <button class="confirm" open-type='getUserInfo' bindgetuserinfo="getUserInfo">注册并登录</button> -->
 
 
       <view class="shen_title">
