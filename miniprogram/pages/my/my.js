@@ -1,5 +1,6 @@
 const app = getApp();
 const config = require("../../config.js");
+const db = wx.cloud.database();
 Page({
 
       /**
@@ -8,11 +9,29 @@ Page({
       data: {
             showShare: false,
             poster: JSON.parse(config.data).share_poster,
+            userInfo: {},
+            hasUserInfo: false
       },
-      onShow() {
-            this.setData({
-                  userinfo: app.userinfo
-            })
+      onShow: function() {
+            let that = this;
+            db.collection('user').where({
+              _openid: app.openid
+            }).get({
+              success: function (res) {
+                    console.log(res)
+                    that.setData({
+                          userInfo: res.data[0].info,
+                          hasUserInfo: true
+                    })
+              },
+              fail(){
+                    console.log("fail")
+                    that.setData({
+                      hasUserInfo: false
+                    })
+              }
+        })
+        console.log(that.data.userInfo);
       },
       go(e) {
             if (e.currentTarget.dataset.status == '1') {
